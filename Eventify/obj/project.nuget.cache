@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ESA98uT9sYs=",
+  "dgSpecHash": "63+0svv6d3A=",
   "success": true,
   "projectFilePath": "C:\\Users\\ayaan\\Desktop\\final project\\prog-3000\\Eventify\\Eventify\\Eventify.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\ayaan\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\9.0.11\\microsoft.entityframeworkcore.relational.9.0.11.nupkg.sha512",
     "C:\\Users\\ayaan\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\9.0.11\\microsoft.entityframeworkcore.sqlite.9.0.11.nupkg.sha512",
     "C:\\Users\\ayaan\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\9.0.11\\microsoft.entityframeworkcore.sqlite.core.9.0.11.nupkg.sha512",
+    "C:\\Users\\ayaan\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\9.0.11\\microsoft.entityframeworkcore.tools.9.0.11.nupkg.sha512",
     "C:\\Users\\ayaan\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.11\\microsoft.extensions.caching.abstractions.9.0.11.nupkg.sha512",
     "C:\\Users\\ayaan\\.nuget\\packages\\microsoft.extensions.caching.memory\\9.0.11\\microsoft.extensions.caching.memory.9.0.11.nupkg.sha512",
     "C:\\Users\\ayaan\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.11\\microsoft.extensions.configuration.abstractions.9.0.11.nupkg.sha512",
