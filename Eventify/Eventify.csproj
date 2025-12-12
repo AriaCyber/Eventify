@@ -21,8 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <ProjectReference Include="..\EventifyTester\EventifyTester.csproj" />
   </ItemGroup>
 
 </Project>
