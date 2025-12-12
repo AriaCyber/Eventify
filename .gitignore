@@ -1,0 +1,39 @@
+# ===== Build results =====
+bin/
+obj/
+
+# ===== User-specific files =====
+.vs/
+*.user
+*.userosscache
+*.suo
+
+# ===== Debug / Release outputs =====
+*.exe
+*.dll
+*.pdb
+*.cache
+*.ilk
+*.log
+
+# ===== ASP.NET Core =====
+appsettings.Development.json
+appsettings.*.json
+
+# ===== Databases =====
+*.db
+*.mdf
+*.ldf
+
+# ===== Publish output =====
+publish/
+wwwroot/dist/
+
+# ===== OS files =====
+.DS_Store
+Thumbs.db
+
+# ===== IDEs =====
+.idea/
+.vscode/
+*.swp
