@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ayaan\\Desktop\\final project\\prog-3000\\Eventify\\Eventify\\Eventify.csproj": {}
+    "E:\\CodingProjects\\Eventify\\Eventify\\Eventify.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ayaan\\Desktop\\final project\\prog-3000\\Eventify\\Eventify\\Eventify.csproj": {
+    "E:\\CodingProjects\\Eventify\\Eventify\\Eventify.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ayaan\\Desktop\\final project\\prog-3000\\Eventify\\Eventify\\Eventify.csproj",
+        "projectUniqueName": "E:\\CodingProjects\\Eventify\\Eventify\\Eventify.csproj",
         "projectName": "Eventify",
-        "projectPath": "C:\\Users\\ayaan\\Desktop\\final project\\prog-3000\\Eventify\\Eventify\\Eventify.csproj",
-        "packagesPath": "C:\\Users\\ayaan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ayaan\\Desktop\\final project\\prog-3000\\Eventify\\Eventify\\obj\\",
+        "projectPath": "E:\\CodingProjects\\Eventify\\Eventify\\Eventify.csproj",
+        "packagesPath": "C:\\Users\\Arian\\.nuget\\packages\\",
+        "outputPath": "E:\\CodingProjects\\Eventify\\Eventify\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ayaan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Arian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -94,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
