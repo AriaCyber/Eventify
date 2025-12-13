@@ -20,8 +20,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\EventifyTester\EventifyTester.csproj" />
-  </ItemGroup>
-
 </Project>
