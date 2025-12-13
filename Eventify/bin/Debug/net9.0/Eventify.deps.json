@@ -11,8 +11,7 @@
           "Microsoft.AspNetCore.OpenApi": "9.0.11",
           "Microsoft.EntityFrameworkCore": "9.0.11",
           "Microsoft.EntityFrameworkCore.Design": "9.0.11",
-          "Microsoft.EntityFrameworkCore.Sqlite": "9.0.11",
-          "Microsoft.EntityFrameworkCore.Tools": "9.0.11"
+          "Microsoft.EntityFrameworkCore.Sqlite": "9.0.11"
         },
         "runtime": {
           "Eventify.dll": {}
@@ -432,11 +431,6 @@
             "assemblyVersion": "9.0.11.0",
             "fileVersion": "9.0.1125.51902"
           }
-        }
-      },
-      "Microsoft.EntityFrameworkCore.Tools/9.0.11": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "9.0.11"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/9.0.11": {
@@ -935,13 +929,6 @@
       "sha512": "sha512-NNfHGXUZ+Ie3Wrzja9ar3hU3octv/fi4ELS6poG2Ncp4p1Kj2rgIhXRMK8zL2BjcNAnGQojhJkBKjEOmhJaIxA==",
       "path": "microsoft.entityframeworkcore.sqlite.core/9.0.11",
       "hashPath": "microsoft.entityframeworkcore.sqlite.core.9.0.11.nupkg.sha512"
-    },
-    "Microsoft.EntityFrameworkCore.Tools/9.0.11": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-24WsEyhGtsRO+87cMOC98aLvb1iflrPvZDvS+qRijlcU7ZrfG1JcgLCfseVk8+BP3H0FB6Rb6twVpxV4yHE99A==",
-      "path": "microsoft.entityframeworkcore.tools/9.0.11",
-      "hashPath": "microsoft.entityframeworkcore.tools.9.0.11.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/9.0.11": {
       "type": "package",

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EventifyTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac9804a4c4a6258af286b5a47cec5916aee2d678")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+759afffbc2a2310f4360fdbd0479b8761c467999")]
 [assembly: System.Reflection.AssemblyProductAttribute("EventifyTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EventifyTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
