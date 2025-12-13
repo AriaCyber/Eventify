@@ -10,11 +10,11 @@ namespace Eventify.Models
 
         public DateTime PaymentDate { get; set; }
 
-        public string PaymentMethod { get; set; }  // e.g. Card, PayPal
+        public string PaymentMethod { get; set; } = null!; // e.g. Card, PayPal
 
         public bool IsSuccessful { get; set; }
 
         // Navigation
-        public Order Order { get; set; }
+        public Order Order { get; set; } = null!;
     }
 }

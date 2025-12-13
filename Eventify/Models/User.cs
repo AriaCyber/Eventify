@@ -6,7 +6,7 @@ public class User
 {
      public int Id { get; set; }
 
-        public string Email { get; set; }
+        public string Email { get; set; } = null!;
 
-        public string Role { get; set; } // User / Admin
+        public string Role { get; set; } = null!; // User / Admin
 }

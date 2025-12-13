@@ -8,7 +8,7 @@ namespace Eventify.DTOs.Admin
 
         public decimal Amount { get; set; }
 
-        public string Status { get; set; }
+        public string Status { get; set; } = null!;
 
         public DateTime RequestedAt { get; set; }
 

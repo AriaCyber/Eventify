@@ -6,11 +6,11 @@ namespace Eventify.Models
 
         // Who placed the order
         public int UserId { get; set; }
-        public User User { get; set; }
+        public User User { get; set; } = null!;
 
         // Event being purchased
         public int EventId { get; set; }
-        public Event Event { get; set; }
+        public Event Event { get; set; } = null!;
 
         // Order details
         public DateTime OrderDate { get; set; } = DateTime.UtcNow;
@@ -18,10 +18,10 @@ namespace Eventify.Models
 
         // Status for admin + refunds
         // e.g. Pending, Paid, Cancelled, Refunded
-        public string Status { get; set; }
+        public string Status { get; set; } = null!;
 
         // Navigation
-        public ICollection<Payment> Payments { get; set; }
-        public ICollection<Refund> Refunds { get; set; }
+        public ICollection<Payment> Payments { get; set; } = null!;
+        public ICollection<Refund> Refunds { get; set; } = null!;
     }
 }

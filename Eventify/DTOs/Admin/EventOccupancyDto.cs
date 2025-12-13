@@ -4,7 +4,7 @@ namespace Eventify.DTOs.Admin
     {
         public int EventId { get; set; }
 
-        public string EventTitle { get; set; }
+        public string EventTitle { get; set; } = null!;
 
         public int Capacity { get; set; }
 
