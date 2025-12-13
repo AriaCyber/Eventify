@@ -39,11 +39,11 @@ namespace Eventify.Controllers
         {
             if (booking.TicketCount <= 0)
                 return BadRequest(new { message = "TicketCount must be greater than 0" });
-            // make sure event exists
+            //make sure event exists
             var evt = await _context.Events.FirstOrDefaultAsync(e => e.Id == booking.EventId);
             if (evt == null)
                 return NotFound(new { message = "Event does not exist" });
-            // make sure user exists
+            //make sure user exists
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == booking.UserId);
             if (user == null)
                 return NotFound(new { message = "User does not exist" });
