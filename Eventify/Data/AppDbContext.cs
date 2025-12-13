@@ -7,7 +7,7 @@ namespace Eventify.Data
     {
         public DbSet<Event> Events { get; set; }
         public DbSet<User> Users { get; set; }
-
+        public DbSet<Booking> Bookings { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Filename=eventify.db");
