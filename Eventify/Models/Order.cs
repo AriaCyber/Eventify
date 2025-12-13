@@ -17,7 +17,7 @@ namespace Eventify.Models
         public decimal TotalAmount { get; set; }
 
         // Status for admin + refunds
-        // e.g. Pending, Paid, Cancelled, Refunded
+        //Pending, Paid, Cancelled, Refunded
         public string Status { get; set; } = null!;
 
         // Navigation
