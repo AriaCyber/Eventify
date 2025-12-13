@@ -22,8 +22,11 @@ appsettings.*.json
 
 # ===== Databases =====
 *.db
+*.db-shm
+*.db-wal
 *.mdf
 *.ldf
+
 
 # ===== Publish output =====
 publish/
@@ -37,3 +40,4 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
+Eventify/eventify.db
