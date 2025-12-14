@@ -12,7 +12,6 @@ export default function AdminDashboard(){
 
   return (
     <div>
-      <h2>Admin Dashboard</h2>
 
       <h3>Sales Report</h3>
       <ul>

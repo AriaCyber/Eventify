@@ -11,9 +11,10 @@ import PromoCodes from "./admin/PromoCodes";
 import Refunds from "./admin/Refunds";
 import AdminLogin from "./admin/AdminLogin";
 import AdminRoute from "./admin/AdminRoute";
+import AdminLayout from "./admin/AdminLayout";
 
 
-export default function App(){
+export default function App() {
   return (
     <div className="shell">
       <header>
@@ -21,57 +22,35 @@ export default function App(){
         <nav className="nav">
           <Link to="/">Discover</Link>
           <Link to="/me/tickets">My Tickets</Link>
+          <Link to="/admin">Admin</Link>
         </nav>
       </header>
+
       <Routes>
-        
-        
-      <Route path="/admin/login" element={<AdminLogin/>} />
+        {/* Public / User Routes */}
+        <Route path="/" element={<Discover />} />
+        <Route path="/events/:id" element={<EventDetails />} />
+        <Route path="/events/:id/checkout" element={<Checkout />} />
+        <Route path="/events/:id/reviews" element={<Reviews />} />
+        <Route path="/me/tickets" element={<MyTickets />} />
 
-<Route
-  path="/admin"
-  element={
-    <AdminRoute>
-      <AdminDashboard />
-    </AdminRoute>
-  }
-/>
+        {/* Admin Login */}
+        <Route path="/admin/login" element={<AdminLogin />} />
 
-<Route
-  path="/admin/events"
-  element={
-    <AdminRoute>
-      <ManageEvents />
-    </AdminRoute>
-  }
-/>
-
-<Route
-  path="/admin/promocodes"
-  element={
-    <AdminRoute>
-      <PromoCodes />
-    </AdminRoute>
-  }
-/>
-
-<Route
-  path="/admin/refunds"
-  element={
-    <AdminRoute>
-      <Refunds />
-    </AdminRoute>
-  }
-/>
-
-
-
-
-        <Route path="/" element={<Discover/>} />
-        <Route path="/events/:id" element={<EventDetails/>} />
-        <Route path="/events/:id/checkout" element={<Checkout/>} />
-        <Route path="/events/:id/reviews" element={<Reviews/>} />
-        <Route path="/me/tickets" element={<MyTickets/>} />
+        {/* Protected Admin Area */}
+        <Route
+          path="/admin"
+          element={
+            <AdminRoute>
+              <AdminLayout />
+            </AdminRoute>
+          }
+        >
+          <Route index element={<AdminDashboard />} />
+          <Route path="events" element={<ManageEvents />} />
+          <Route path="promocodes" element={<PromoCodes />} />
+          <Route path="refunds" element={<Refunds />} />
+        </Route>
       </Routes>
     </div>
   );

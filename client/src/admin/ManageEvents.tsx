@@ -7,9 +7,13 @@ const api = axios.create({
 
 export default function ManageEvents() {
   const [events, setEvents] = useState<any[]>([]);
+
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState(20);
   const [capacity, setCapacity] = useState(100);
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [isPublic, setIsPublic] = useState(true);
 
   async function load() {
     const res = await api.get("/admin/events");
@@ -21,22 +25,31 @@ export default function ManageEvents() {
   }, []);
 
   async function addEvent() {
+    if (!title || !startDate || !endDate) {
+      alert("Please fill all required fields");
+      return;
+    }
+
     try {
       await api.post("/admin/events", {
-        title: title,
+        title,
         description: "",
-        startDateTime: "2025-01-01T18:00:00",
-        endDateTime: "2025-01-01T21:00:00",
-        capacity: capacity,
+        startDateTime: startDate,
+        endDateTime: endDate,
+        capacity,
         remainingCapacity: capacity,
         pricePerTicket: price,
-        isPublic: true
+        isPublic,
       });
 
+      // reset form
       setTitle("");
+      setStartDate("");
+      setEndDate("");
+
       load();
-    } catch (err: any) {
-      alert(err?.response?.data || err.message);
+    } catch (e: any) {
+      alert(e?.response?.data || e.message);
     }
   }
 
@@ -49,32 +62,71 @@ export default function ManageEvents() {
     <div>
       <h2>Manage Events</h2>
 
-      <input
-        placeholder="Event title"
-        value={title}
-        onChange={e => setTitle(e.target.value)}
-      />
+      <label>
+        Event Title
+        <input
+          placeholder="Concert, Conference, Meetup..."
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+      </label>
 
-      <input
-        type="number"
-        placeholder="Price"
-        value={price}
-        onChange={e => setPrice(Number(e.target.value))}
-      />
+      <label>
+        Ticket Price ($)
+        <input
+          type="number"
+          min={0}
+          value={price}
+          onChange={(e) => setPrice(Number(e.target.value))}
+        />
+      </label>
 
-      <input
-        type="number"
-        placeholder="Capacity"
-        value={capacity}
-        onChange={e => setCapacity(Number(e.target.value))}
-      />
+      <label>
+        Capacity
+        <input
+          type="number"
+          min={1}
+          value={capacity}
+          onChange={(e) => setCapacity(Number(e.target.value))}
+        />
+      </label>
+
+      <label>
+        Start Date & Time
+        <input
+          type="datetime-local"
+          value={startDate}
+          onChange={(e) => setStartDate(e.target.value)}
+        />
+      </label>
+
+      <label>
+        End Date & Time
+        <input
+          type="datetime-local"
+          value={endDate}
+          onChange={(e) => setEndDate(e.target.value)}
+        />
+      </label>
+
+      <label style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+        <input
+          type="checkbox"
+          checked={isPublic}
+          onChange={(e) => setIsPublic(e.target.checked)}
+        />
+        Public Event
+      </label>
 
       <button onClick={addEvent}>Add Event</button>
 
+      <hr />
+
       <ul>
-        {events.map(ev => (
+        {events.map((ev) => (
           <li key={ev.id}>
-            {ev.title} — ${ev.pricePerTicket}
+            <strong>{ev.title}</strong> — ${ev.pricePerTicket} —{" "}
+            {new Date(ev.startDateTime).toLocaleString()}
             <button onClick={() => remove(ev.id)}>Delete</button>
           </li>
         ))}
