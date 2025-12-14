@@ -5,6 +5,13 @@ import EventDetails from "./pages/EventDetails";
 import Checkout from "./pages/Checkout";
 import MyTickets from "./pages/MyTickets";
 import Reviews from "./pages/Reviews";
+import AdminDashboard from "./admin/AdminDashboard";
+import ManageEvents from "./admin/ManageEvents";
+import PromoCodes from "./admin/PromoCodes";
+import Refunds from "./admin/Refunds";
+import AdminLogin from "./admin/AdminLogin";
+import AdminRoute from "./admin/AdminRoute";
+
 
 export default function App(){
   return (
@@ -17,6 +24,49 @@ export default function App(){
         </nav>
       </header>
       <Routes>
+        
+        
+      <Route path="/admin/login" element={<AdminLogin/>} />
+
+<Route
+  path="/admin"
+  element={
+    <AdminRoute>
+      <AdminDashboard />
+    </AdminRoute>
+  }
+/>
+
+<Route
+  path="/admin/events"
+  element={
+    <AdminRoute>
+      <ManageEvents />
+    </AdminRoute>
+  }
+/>
+
+<Route
+  path="/admin/promocodes"
+  element={
+    <AdminRoute>
+      <PromoCodes />
+    </AdminRoute>
+  }
+/>
+
+<Route
+  path="/admin/refunds"
+  element={
+    <AdminRoute>
+      <Refunds />
+    </AdminRoute>
+  }
+/>
+
+
+
+
         <Route path="/" element={<Discover/>} />
         <Route path="/events/:id" element={<EventDetails/>} />
         <Route path="/events/:id/checkout" element={<Checkout/>} />
