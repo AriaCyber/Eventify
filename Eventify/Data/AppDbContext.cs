@@ -12,9 +12,19 @@ namespace Eventify.Data
         public DbSet<Refund> Refunds { get; set; }
         public DbSet<PromoCode> Promocodes { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public AppDbContext()
+        {
+        }
+
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        {
+        }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Filename=eventify.db");
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlite("Filename=eventify.db");
+            }
         }
     }
 }

@@ -110,6 +110,24 @@
       "Microsoft.EntityFrameworkCore.Analyzers/9.0.11": {
         "type": "package"
       },
+      "Microsoft.EntityFrameworkCore.InMemory/9.0.11": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.11",
+          "Microsoft.Extensions.Caching.Memory": "9.0.11",
+          "Microsoft.Extensions.Logging": "9.0.11"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/9.0.11": {
         "type": "package",
         "dependencies": {
@@ -1222,6 +1240,21 @@
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
+    "Microsoft.EntityFrameworkCore.InMemory/9.0.11": {
+      "sha512": "0uoF/3xXeUqDw4dJOumUKpBSdIZF/E6nWigwDAjEvodDWp9++6/OvCvMj0aXoctPvTSeG/PwZfDqCIfmKhOqgg==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/9.0.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.9.0.11.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
+      ]
+    },
     "Microsoft.EntityFrameworkCore.Relational/9.0.11": {
       "sha512": "b6A19xFuU2F92C7N70+HSjRcxwDHTYTdZ/1PyLpHmzXt35G6ugCVKTPS+YJVK1u5ArrDFGQNu+EI+UrSRgUwGA==",
       "type": "package",
@@ -2250,6 +2283,7 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "Eventify >= 1.0.0",
+      "Microsoft.EntityFrameworkCore.InMemory >= 9.0.11",
       "Microsoft.NET.Test.Sdk >= 17.12.0",
       "Moq >= 4.20.72",
       "coverlet.collector >= 6.0.2",
@@ -2258,23 +2292,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Arian\\.nuget\\packages\\": {},
+    "C:\\Users\\ayaan\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Arian\\Documents\\GitHub\\Eventify\\EventifyTests\\EventifyTests.csproj",
+      "projectUniqueName": "C:\\Users\\ayaan\\Desktop\\final project\\prog-3000\\Eventify\\EventifyTests\\EventifyTests.csproj",
       "projectName": "EventifyTests",
-      "projectPath": "C:\\Users\\Arian\\Documents\\GitHub\\Eventify\\EventifyTests\\EventifyTests.csproj",
-      "packagesPath": "C:\\Users\\Arian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Arian\\Documents\\GitHub\\Eventify\\EventifyTests\\obj\\",
+      "projectPath": "C:\\Users\\ayaan\\Desktop\\final project\\prog-3000\\Eventify\\EventifyTests\\EventifyTests.csproj",
+      "packagesPath": "C:\\Users\\ayaan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ayaan\\Desktop\\final project\\prog-3000\\Eventify\\EventifyTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Arian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ayaan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2289,8 +2323,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\Arian\\Documents\\GitHub\\Eventify\\Eventify\\Eventify.csproj": {
-              "projectPath": "C:\\Users\\Arian\\Documents\\GitHub\\Eventify\\Eventify\\Eventify.csproj"
+            "C:\\Users\\ayaan\\Desktop\\final project\\prog-3000\\Eventify\\Eventify\\Eventify.csproj": {
+              "projectPath": "C:\\Users\\ayaan\\Desktop\\final project\\prog-3000\\Eventify\\Eventify\\Eventify.csproj"
             }
           }
         }
@@ -2311,6 +2345,10 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": {
+            "target": "Package",
+            "version": "[9.0.11, )"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[17.12.0, )"
@@ -2348,7 +2386,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

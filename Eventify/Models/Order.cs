@@ -13,8 +13,7 @@ namespace Eventify.Models
 
         public DateTime OrderDate { get; set; } = DateTime.UtcNow;
         public decimal TotalAmount { get; set; }
-
-        public string Status { get; set; } = null!;
+        public string? Status { get; set; }
     }
 
     public class Refund
