@@ -8,10 +8,7 @@ namespace Eventify.Models
         public int EventId { get; set; }
         public int UserId { get; set; }
 
-        public User User { get; set; } = null!;
         public int TicketCount { get; set; }
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-        public DateTime BookingDate { get; set; } = DateTime.UtcNow;
     }
 }
