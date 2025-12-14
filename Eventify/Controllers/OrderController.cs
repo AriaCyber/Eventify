@@ -72,8 +72,13 @@ namespace Eventify.Controllers
                 }
             }
             order.IsRefunded = true;
+            order.Status = "Refunded";
             await _context.SaveChangesAsync();
-            return Ok(new { message = "Order refunded" });
+            return Ok(new
+            {
+                message = "Order refunded",
+                order
+            });
         }
     }
 }
