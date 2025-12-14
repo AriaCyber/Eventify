@@ -1,6 +1,6 @@
-namespace Eventify.Models
+namespace Eventify.DTOs.Admin
 {
-    public class PromoCode
+    public class PromoCodeAdminDto
     {
         public int Id { get; set; }
         public string Code { get; set; } = null!;
