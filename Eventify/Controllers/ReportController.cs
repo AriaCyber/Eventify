@@ -21,7 +21,7 @@ namespace Eventify.Controllers
         public async Task<IActionResult> GetSalesReport()
         {
             var report = await _context.Orders
-                .Where(o => o.Status == "Paid")
+                .Where(o => o.IsPaid && !o.IsRefunded)
                 .GroupBy(o => o.OrderDate.Date)
                 .Select(g => new SalesReportDto
                 {

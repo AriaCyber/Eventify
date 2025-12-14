@@ -10,6 +10,11 @@ namespace Eventify.Models
         public decimal Amount { get; set; }
         public bool IsPaid { get; set; } = true;
         public bool IsRefunded { get; set; } = false;
+
+        public DateTime OrderDate { get; set; } = DateTime.UtcNow;
+        public decimal TotalAmount { get; set; }
+
+        public string Status { get; set; }
     }
 
     public class Refund
